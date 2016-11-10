@@ -1,15 +1,11 @@
-# -*- coding: utf-8 -*-
-"""
-Spyder Editor
-
-This is a temporary script file.
-"""
 import urllib
 import re
 import os
 
 sd_targetDir = r"/Users/Ivy11D/Desktop/IR/webpage"  #文件保存路径
-def destFile(sd_path):  #e.g sd_path='images/lsxy.jpg'
+sd_url = "http://cist.bnu.edu.cn/"
+
+def destFile(sd_path): 
     if not os.path.isdir(sd_targetDir):  
         os.mkdir(sd_targetDir)  
     sd_pos = sd_path.rindex('/')  
@@ -30,6 +26,5 @@ def getImgs(sd_pageContent,sd_urlRoot):
         sd_imgPath = destFile(sd_imgurl)
         urllib.request.urlretrieve(sd_imgurl,sd_imgPath)
 
-sd_url = "http://history.bnu.edu.cn/"
 sd_pageContent = getpageConent(sd_url)
 getImgs(sd_pageContent,sd_url)
