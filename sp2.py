@@ -1,15 +1,8 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Sep 29 08:51:22 2016
-
-@author: fan
-"""
-
 import urllib
 import re
 import os
 
-sd_urlRoot = "http://history.bnu.edu.cn/"  # the target website
+sd_urlRoot = "http://cist.bnu.edu.cn/"  # the target website
 sd_targetDir = r"/Users/Ivy11D/Desktop/IR/webpage"  #文件保存路径
 def destFile(sd_path): 
     if not os.path.isdir(sd_targetDir):  
